@@ -1,15 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import Reactstrap from 'reactstrap';
-
+import React from 'react';
+import Memes from './components/MemesGenerator';
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <div>
-
-      </div>
-    </div>
+    <>
+     <Memes />
+   </>
   );
 }
 
