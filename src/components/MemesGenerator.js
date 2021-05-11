@@ -10,8 +10,8 @@ export default function Memes(){
     }, []);
 
     const fetchPicture = async () => {
-        await Axios.get(" https://api.imgflip.com/get_memes")
-        .then((response) => setPicture(response.data.data))
+        await Axios.get("https://api.imgflip.com/get_memes")
+        .then((response) => console.log(response.data.data))
         .catch((error) => console.log(error))
     };
 
@@ -22,6 +22,7 @@ export default function Memes(){
                 <input></input>
                 <button></button>
             </div>
+            <img src={picture.memes} />
         </div>
     );
 }
