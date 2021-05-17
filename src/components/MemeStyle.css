@@ -1,0 +1,11 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.memePic {
+    width: 600px;
+    height: 500px;
+  }
+  .generatedPic {
+      margin-top: 3%;
+  }
