@@ -4,33 +4,46 @@
 html,body {
     font-size: 20pt;
     background-color: #F0F0EB;
+    margin:0 auto;
+}
+h1 {
+    font-size: 20pt;
 }
 .instruction {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 .memePic {
     height: 500px;
+    margin:0 auto;
   }
-  .generateBtn{
-      margin-top: 2%;
+.generateBtn {
+    margin-top: 2%;
   }
   p {
-    font-size: 18pt;  
+    font-size: 14pt;  
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   }
   .generatedPic {
-      margin-top: 1%;
-      margin-bottom: 5%;
-      margin-left:2%;
-      margin-right: 2%;  
+    margin-top: 1%;
+    margin-bottom: 4%; 
   }
   .inputContent {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .myMeme{
       position: relative;
+  }
+  @media screen and (max-width: 600px){
+    .memePic {
+        height: 400px;
+        width: 70vw;
+      }
+      h1 {
+        font-size: 1.4em;
+    }
+      
   }

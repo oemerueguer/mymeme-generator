@@ -13,10 +13,11 @@ export default function Memes() {
     fetchPicture();
   }, []);
 
-  // To have a random picture out of 100
-  const randomNumber = Math.floor(Math.random() * 100);
+  // To have a random picture out of 100 -->>> const randomNumber = Math.floor(Math.random() * 100)
+  // --> it is in fetching to produce by every fetching a random number
 
   const fetchPicture = async () => {
+    const randomNumber = Math.floor(Math.random() * 100);
     await Axios.get("https://api.imgflip.com/get_memes")
       .then((response) =>
         setPicture(response.data.data.memes[randomNumber].url)
