@@ -20,11 +20,18 @@ h1 {
 .generateBtn {
     margin-top: 2%;
   }
-  p {
-    font-size: 14pt;  
+  .firstText {
+    position: absolute;
+    font-size: 18pt;  
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+    max-width: 350px;
+    word-wrap: break-word;
+    overflow: hidden;
   }
   .generatedPic {
     margin-top: 1%;
@@ -38,7 +45,7 @@ h1 {
   .myMeme{
     position: relative;
   }
-  
+
   @media screen and (max-width: 600px){
     .memePic {
         height: 400px;

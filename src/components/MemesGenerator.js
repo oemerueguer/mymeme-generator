@@ -74,16 +74,16 @@ export default function Memes() {
     
     <div className="myMeme">
       <div>
-          <p>{firstText}</p>
+          <p className="firstText">{firstText}</p>
       </div>
       <div>
-          <p>{secondText}</p>
+          <p className="secondText">{secondText}</p>
       </div>
       <div>
-          <p>{thirdText}</p>
+          <p className="thirdText">{thirdText}</p>
       </div>
       <div>
-          <p>{fourthText}</p>
+          <p className="fourthText">{fourthText}</p>
       </div>
       <div className="generatedPic">
         {picture && <img className="memePic" src={picture} />}
