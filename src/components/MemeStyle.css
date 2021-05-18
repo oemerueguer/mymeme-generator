@@ -36,8 +36,9 @@ h1 {
     justify-content: center;
   }
   .myMeme{
-      position: relative;
+    position: relative;
   }
+  
   @media screen and (max-width: 600px){
     .memePic {
         height: 400px;

@@ -24,6 +24,11 @@ export default function Memes() {
       )
       .catch((error) => console.log(error));
   };
+  const uploadingPicture = (e) => {
+    console.log(e)
+    setPicture({file: URL.createObjectURL(e.target.files[0])}.file)
+  }
+
  // Control purposes if states working
  // console.log(firstText);
  // console.log(secondText);
@@ -58,6 +63,12 @@ export default function Memes() {
           onChange={(e) => setFourthText(e.target.value.toUpperCase())}
           value={fourthText}
         />       
+        <input 
+          style={{ margin: "10px" }}
+          type="file"
+          accept="image/x-png,image/gif,image/jpeg"
+          onChange={uploadingPicture}
+        />
       </div>
       <button className="generateBtn" onClick={fetchPicture}>Generate New Meme</button>
     
