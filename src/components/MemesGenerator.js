@@ -56,27 +56,30 @@ export default function Memes() {
           style={{ margin: "10px" }}
           onChange={(e) => setFourthText(e.target.value.toUpperCase())}
           value={fourthText}
-        />
+        />       
       </div>
       <button className="generateBtn" onClick={fetchPicture}>Generate New Meme</button>
-
+    
+    <div className="myMeme">
       <div>
           <p>{firstText}</p>
       </div>
       <div>
           <p>{secondText}</p>
       </div>
-
-      <div className="generatedPic">
-        {picture && <img className="memePic" src={picture} />}
-      </div>
-
       <div>
           <p>{thirdText}</p>
       </div>
       <div>
           <p>{fourthText}</p>
       </div>
+      <div className="generatedPic">
+        {picture && <img className="memePic" src={picture} />}
+      </div>
+
+
+     </div> 
+
     </div>
   );
 }
