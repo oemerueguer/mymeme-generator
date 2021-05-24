@@ -6,8 +6,9 @@ html,body {
     background-color: #F0F0EB;
     margin:0 auto;
 }
-h1 {
-    font-size: 13pt;
+.title_top {
+    font-size: 18pt;
+    margin-top: 5%;
 }
 .instruction {
     font-size: 12pt;

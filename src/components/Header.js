@@ -11,6 +11,7 @@ import {
   MDBBtn,
   MDBCollapse
 } from 'mdb-react-ui-kit';
+import './Header.css';
 
 
 export default function Header() {
