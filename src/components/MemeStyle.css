@@ -1,16 +1,17 @@
 * {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
 }
 html,body {
-    font-size: 20pt;
+    font-size: 14pt;
     background-color: #F0F0EB;
     margin:0 auto;
 }
 h1 {
-    font-size: 20pt;
+    font-size: 13pt;
 }
 .instruction {
     font-size: 12pt;
+    margin-top: 3%;
 }
 .memePic {
     height: 500px;
@@ -22,8 +23,53 @@ h1 {
   }
   .firstText {
     position: absolute;
-    font-size: 18pt;  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    font-size: 12pt;  
     top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+    max-width: 350px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  .secondText {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    font-size: 12pt;  
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+    max-width: 350px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  .thirdText {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    font-size: 12pt;  
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+    max-width: 350px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  .fourthText {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    font-size: 12pt;  
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%, 0);
     color: white;

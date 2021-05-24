@@ -36,8 +36,8 @@ export default function Memes() {
  // console.log(fourthText);
   return (
     <div className="App">
-      <h1>Meme Generator</h1>
-      <p className="instruction">Instruction: Texts are draggable</p>
+      <h1>Instruction</h1>
+      <p className="instruction">Create up to 4 texts and drag them where you want are</p>
       <div className="inputContent">
         <input
           placeholder="Drag First Text"
