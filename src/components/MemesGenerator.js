@@ -37,7 +37,7 @@ export default function Memes() {
   return (
     <div className="App">
       <h1 className="title_top">Instruction</h1>
-      <p className="instruction">Create up to 4 texts and drag them where you want are</p>
+      <p className="instruction">Create up to 4 texts and drag them where you want to</p>
       <div className="inputContent">
         <input
           placeholder="Drag First Text"
