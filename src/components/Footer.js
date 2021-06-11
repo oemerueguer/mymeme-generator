@@ -12,7 +12,7 @@ export default function Footer() {
             <h5 className='text-uppercase'>About me</h5>
 
             <p>
-                I'am passionate Full-Stack Developer and Designer. I like to live out my creativity and
+                I'm a passionate Full-Stack Developer and Designer. I like to live out my creativity and
                 trying out new libs! Every day a new tech will be born - so, declare variables, not war!
             </p>
           </MDBCol>
@@ -21,7 +21,10 @@ export default function Footer() {
             <h5 className='text-uppercase'>Github</h5>
 
             <p>
-                If you want to see more, just follow me on Github.com!
+                If you want to see more, just follow me on GitHub
+            </p>
+            <p>
+              <i class="fab fa-github"></i>
             </p>
           </MDBCol>
         </MDBRow>

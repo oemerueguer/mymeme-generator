@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import "../components/MemeStyle.css";
+import domtoimage from "dom-to-image";
 
 export default function Memes() {
   const [picture, setPicture] = useState();
@@ -27,6 +28,15 @@ export default function Memes() {
   const uploadingPicture = (e) => {
     console.log(e)
     setPicture({file: URL.createObjectURL(e.target.files[0])}.file)
+  }
+  const savePicture = () => {
+    domtoimage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
+    .then((dataUrl) => {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
   }
 
  // Control purposes if states working
@@ -71,8 +81,10 @@ export default function Memes() {
         />
       </div>
       <button className="generateBtn" onClick={fetchPicture}>Generate New Meme</button>
+      <button>Save Image</button>
     
     <div className="myMeme">
+      <div id="my-node">
       <div>
           <p className="firstText">{firstText}</p>
       </div>
@@ -86,7 +98,8 @@ export default function Memes() {
           <p className="fourthText">{fourthText}</p>
       </div>
       <div className="generatedPic">
-        {picture && <img className="memePic" src={picture} />}
+        {picture && <img className="memePic" src={picture} alt="Your generated Meme"/>}
+      </div>
       </div>
 
 
