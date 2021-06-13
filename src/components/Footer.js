@@ -21,11 +21,9 @@ export default function Footer() {
             <h5 className='text-uppercase'>Github</h5>
 
             <p>
-                If you want to see more, just follow me on GitHub
+                If you want to see more, just follow me on <a href="https://github.com/oemerueguer">GitHub</a>
             </p>
-            <p>
-              <i class="fab fa-github"></i>
-            </p>
+            
           </MDBCol>
         </MDBRow>
       </MDBContainer>

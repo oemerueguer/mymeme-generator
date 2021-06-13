@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import "../components/MemeStyle.css";
 import domtoimage from "dom-to-image";
+import Draggable from "react-draggable";
 
 export default function Memes() {
   const [picture, setPicture] = useState();
@@ -26,28 +27,31 @@ export default function Memes() {
       .catch((error) => console.log(error));
   };
   const uploadingPicture = (e) => {
-    console.log(e)
-    setPicture({file: URL.createObjectURL(e.target.files[0])}.file)
-  }
+    console.log(e);
+    setPicture({ file: URL.createObjectURL(e.target.files[0]) }.file);
+  };
   const savePicture = () => {
-    domtoimage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
-    .then((dataUrl) => {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
+    domtoimage
+      .toJpeg(document.getElementById("my-node"), { quality: 0.95 })
+      .then((dataUrl) => {
+        var link = document.createElement("a");
+        link.download = "my-image-name.jpeg";
         link.href = dataUrl;
         link.click();
-    });
-  }
+      });
+  };
 
- // Control purposes if states working
- // console.log(firstText);
- // console.log(secondText);
- // console.log(thirdText);
- // console.log(fourthText);
+  // Control purposes if states working
+  // console.log(firstText);
+  // console.log(secondText);
+  // console.log(thirdText);
+  // console.log(fourthText);
   return (
     <div className="App">
       <h1 className="title_top">Instruction</h1>
-      <p className="instruction">Create up to 4 texts and drag them where you want to</p>
+      <p className="instruction">
+        Create up to 4 texts and drag them where you want to
+      </p>
       <div className="inputContent">
         <input
           placeholder="Drag First Text"
@@ -72,39 +76,55 @@ export default function Memes() {
           style={{ margin: "10px" }}
           onChange={(e) => setFourthText(e.target.value.toUpperCase())}
           value={fourthText}
-        />       
-        <input 
+        />
+        <input
           style={{ margin: "10px" }}
           type="file"
           accept="image/x-png,image/gif,image/jpeg"
           onChange={uploadingPicture}
         />
       </div>
-      <button className="generateBtn" onClick={fetchPicture}>Generate New Meme</button>
-      <button>Save Image</button>
-    
-    <div className="myMeme">
-      <div id="my-node">
       <div>
-          <p className="firstText">{firstText}</p>
-      </div>
-      <div>
-          <p className="secondText">{secondText}</p>
-      </div>
-      <div>
-          <p className="thirdText">{thirdText}</p>
-      </div>
-      <div>
-          <p className="fourthText">{fourthText}</p>
-      </div>
-      <div className="generatedPic">
-        {picture && <img className="memePic" src={picture} alt="Your generated Meme"/>}
-      </div>
+      <button className="generateBtn" onClick={fetchPicture}>
+        Generate New Meme
+      </button>
+      <button onClick={savePicture}>Save Image</button>
       </div>
 
-
-     </div> 
-
+      <div className="myMeme">
+        <div id="my-node">
+          <Draggable>
+            <div>
+              <p className="firstText">{firstText}</p>
+            </div>
+          </Draggable>
+          <Draggable>
+            <div>
+              <p className="secondText">{secondText}</p>
+            </div>
+          </Draggable>
+          <Draggable>
+            <div>
+              <p className="thirdText">{thirdText}</p>
+            </div>
+          </Draggable>
+          <Draggable>
+            <div>
+              <p className="fourthText">{fourthText}</p>
+            </div>
+          </Draggable>
+ 
+          <div className="generatedPic">
+            {picture && (
+              <img
+                className="memePic"
+                src={picture}
+                alt="Your generated Meme"
+              />
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
