@@ -5,6 +5,10 @@ html,body {
     font-size: 14pt;
     background-color: #F0F0EB;
     margin:0 auto;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
 }
 .title_top {
     font-size: 18pt;
